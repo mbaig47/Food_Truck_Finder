@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <link href="styles.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+    <script src="Food_Truck_Finder.js"></script>
+    <title>Food Truck Finder</title>
+</head>
+<body>
+<!-- This part is for the search box-->
+<div class="search-box" id="searchBox_div">
+    <input class="search-txt" name="" placeholder="Search for food truck" type="text"/>
+    <a class="search-btn" href="#">
+        <i class="fas fa-search"></i>
+    </a>
+</div>
+<!-- This part is for maps using google API-->
+<div class="maps_div" id="googleMap" style="width:260%;height:600px;"></div>
+
+<script>
+    function myMap() {
+        var mapProp= {
+            center:new google.maps.LatLng(51.508742,-0.120850),
+            zoom:5,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqV-VCvruObpZgGWmyGLAnJYgiLnNer-I&callback=myMap"></script>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
