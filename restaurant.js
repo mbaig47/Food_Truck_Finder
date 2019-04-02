@@ -74,5 +74,90 @@ let Restaurants = [
             "American",
             "Canadian"
         ]
+    ),
+
+    new Restaurant(
+        1,
+        "Desert-a-truck",
+        4,
+        3.2,
+        [
+            ['Desert Cup', 10.99, "a to-go cup of deserts"],
+            ['Whatabirthday', 9.99, "birthday cake for any ocassion"],
+            ['Anchorcake', 12.99, "cake in the shape of an anchor"],
+            ['Pie', 3.14, "pie day special everyday"],
+            ['Cheesecake', 9.99, "a cheesecake with extra cheese"],
+            ['Playcake', 12.99, "a cake for special ocassions"],
+            ['Boxcake', 10.99, "a box shaped cake for sharing"]
+        ],
+        [
+            [
+                '14 - 10 E Jackson Blvd<br>Chicago, IL 60604',
+                41.878273,
+                -87.627517,
+                [
+                    [ ],
+                    [ [ " 3PM -  5PM", 15, 17 ] ],
+                    [ ],
+                    [ [ " 3PM -  5PM", 15, 17 ] ],
+                    [ ],
+                    [ [ " 3PM  - 5PM", 15, 17 ] ],
+                    [ ]
+                ]
+            ]
+        ],
+        [
+            "American"
+        ]
+    ),
+
+    new Restaurant(
+        2,
+        "Dhaba",
+        1,
+        4.9,
+        [
+            ['Biryani', 4.99, "biryani with your choice of meat"],
+            ['Gyros', 2.99, "lamb gyros served with a tzatziki sauce"],
+            ['Fries', 1.99, "potato fries served with a tzatziki sauce"],
+            ['Kabob', 5.99, "kabob made from your choice of meat"],
+            ["Pita Sandwich", 3.99, "pita bread with your choice of stuffing"],
+            ['Mozarella Sticks', 0.99, "5 piece mozarella sticks with choice of dipping sauce"]
+        ],
+        [
+            [
+                '107 S Michigan Ave<br>Chicago, IL 60603',
+                41.880781,
+                -87.624081,
+                [
+                    [ ],
+                    [ [ "11AM -  2PM", 11, 14 ] ],
+                    [ [ "11AM -  2PM", 11, 14 ] ],
+                    [ [ "11AM -  2PM", 11, 14 ] ],
+                    [ [ "11AM -  2PM", 11, 14 ] ],
+                    [ ],
+                    [ ]
+                ]
+            ],
+            [
+                '1155 S State St<br>Chicago, IL 60605',
+                41.867605,
+                -87.627416,
+                [
+                    [ ],
+                    [ [ " 2PM -  4PM", 14, 16 ] ],
+                    [ [ " 2PM -  4PM", 14, 16 ] ],
+                    [ [ " 2PM -  4PM", 14, 16 ] ],
+                    [ [ " 2PM -  4PM", 14, 16 ] ],
+                    [ ],
+                    [ ]
+                ]
+            ],
+        ],
+        [
+            "Indian",
+            "Arabic",
+            "American"
+        ]
     )
 ];
