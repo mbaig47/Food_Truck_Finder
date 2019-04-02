@@ -10,14 +10,21 @@ let Restaurant = class {
         this.cuisine = cuisine;
     };
 
-    getAddress(day, hr) {
+    // gets current address at the given time
+    getAddress(dow, hr) {
         for (let i = 0; i < this.schedule.length; i++) {
-            if (this.schedule[i][4][day] == 1 && this.schedule[i][5][hr] == 1) {
-                return this.schedule[i];
+            let dowSchedule = this.schedule[i][3][dow];
+
+            for (let j = 0; j < dowSchedule.length; j++) {
+                let hrSchedule = dowSchedule[j];
+
+                if (hr >= hrSchedule[1] && hr < hrSchedule[2]) {
+                    return [ this.schedule[i], hrSchedule ];
+                }
             }
         }
 
-        return null;
+        return [ ];
     }
 };
 
@@ -28,33 +35,44 @@ let Restaurants = [
         3,
         4.2,
         [
-            ['Breakfast Sandwich', 2.99],
-            ['Black Coffee', 1.99],
-            ['Avocado Toast', 5.99],
-            ['Scrambled Eggs', 2.99]
+            ['Breakfast Sandwich', 2.99, "some sandwich"],
+            ['Black Coffee', 1.99, "unsweetened and crappy"],
+            ['Avocado Toast', 5.99, "millenial approved"],
+            ['Scrambled Eggs', 2.99, "idk its eggs gggg gggg gggggg gggggg ggggg gggg gggggg gggggg"]
         ],
         [
             [
-                '1191-1137 S Halsted St, Chicago, IL 60607',
-                'MTWRF 7AM - 10AM',
+                '1191 - 1137 S Halsted St<br>Chicago, IL 60607',
                 41.867354,
                 -87.647072,
-                [ 0, 1, 1, 1, 1, 1, 0],
-                [ 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+                [
+                    [ ],
+                    [ [ " 7AM - 10AM", 7, 10 ] ],
+                    [ [ " 7AM -  9AM", 7,  9 ], [ "10AM - 12PM", 10, 12 ] ],
+                    [ [ " 7AM - 10AM", 7, 10 ] ],
+                    [ [ " 7AM -  9AM", 7,  9 ], [ "10AM - 12PM", 10, 12 ] ],
+                    [ [ " 7AM - 10AM", 7, 10 ] ],
+                    [ ]
+                ]
             ],
             [
-                '1199-1131 Michigan Avenue, Chicago, IL 60605',
-                'MWF 10AM - 12PM',
+                '1199 - 1131 Michigan Avenue<br>Chicago, IL 60605',
                 41.867712,
                 -87.623920,
-                [ 0, 1, 0, 1, 0, 1, 0],
-                [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+                [
+                    [ ],
+                    [ [ "10AM - 12PM", 10, 12 ] ],
+                    [ ],
+                    [ [ "10AM - 12PM", 10, 12 ] ],
+                    [ ],
+                    [ [ "10AM - 12PM", 10, 12 ] ],
+                    [ ]
+                ]
             ]
         ],
         [
             "American",
-            "Canadian",
-            "Indian"
+            "Canadian"
         ]
     )
 ];
