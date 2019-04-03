@@ -15,6 +15,10 @@ let Restaurant = class {
         for (let i = 0; i < this.schedule.length; i++) {
             let dowSchedule = this.schedule[i][3][dow];
 
+            if (!dowSchedule) {
+                continue;
+            }
+
             for (let j = 0; j < dowSchedule.length; j++) {
                 let hrSchedule = dowSchedule[j];
 

@@ -10,7 +10,7 @@
     <link href="restaurantStyle.css" rel="stylesheet">
     <script src="restaurant.js"></script>
 
-
+    <script src="http://code.jquery.com/jquery.min.js"></script>
 </head>
 <body>
 <!-- This part is for the search box-->
@@ -24,6 +24,32 @@
 <!-- This part is for maps using google API-->
 <div id="map"></div>
 <script>
+    $(document).ready(function() {
+        function showPosition(position) {
+            console.log("Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude);
+            let currentLat = position.coords.latitude;
+            let currentLong = position.coords.longitude;
+            let restaurantLat = Restaurants[0].getAddress(1, 8)[0][1];
+            let restaurantLong = Restaurants[0].getAddress(1, 8)[0][2];
+            console.log(restaurantLat);
+            console.log(restaurantLong);
+
+            
+
+        }
+
+        navigator.geolocation.getCurrentPosition(showPosition);
+        // console.log(navigator.geolocation.getCurrentPosition(howPosition));
+        for (let i = 0; i < Restaurants.length; i++) {
+            console.log(Restaurants[i].name + ", " + Restaurants[i].getAddress(1, 16));
+        }
+        //console.log(Restaurants);
+
+        
+        
+    });
+
     var map, infoWindow;
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
