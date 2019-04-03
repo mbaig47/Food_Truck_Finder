@@ -106,11 +106,11 @@ body {
     left:0;
 }
 
-
-
-
-
-
+#map {
+    margin-top: 25%;
+    width: 100%;
+    height: 50%;
+}
 
 
 

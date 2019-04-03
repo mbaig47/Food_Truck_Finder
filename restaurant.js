@@ -159,5 +159,55 @@ let Restaurants = [
             "Arabic",
             "American"
         ]
+    ),
+    new Restaurant(
+        3,
+        "Ameer Nawaz",
+        4,
+        4.9,
+        [
+            ['Ameer Biryani', 14.99, "biryani with your choice of meat"],
+            ['Ameer Gyros', 15.99, "lamb gyros served with a tzatziki sauce"],
+            ['Ameer Fries', 4.99, "potato fries served with a tzatziki sauce"],
+            ['Kabob of the kings', 9.99, "kabob made from your choice of meat"],
+            ["King Sandwich", 18.99, "pita bread with your choice of stuffing"],
+            ['Mozarella Sticks', 3.99, "5 piece mozarella sticks with choice of dipping sauce"]
+        ],
+        [
+            [
+                '521 N Rush St<br>Chicago, IL 60611',
+                41.8916,
+                -87.6252,
+                [//Edited upto here
+                    [ ],
+                    [ [ "11AM -  2PM", 11, 14 ] ],
+                    [ [ "11AM -  2PM", 11, 14 ] ],
+                    [ [ "11AM -  2PM", 11, 14 ] ],
+                    [ [ "11AM -  2PM", 11, 14 ] ],
+                    [ ],
+                    [ ]
+                ]
+            ],
+            [
+                '1155 S State St<br>Chicago, IL 60605',
+                41.867605,
+                -87.627416,
+                [
+                    [ ],
+                    [ [ " 2PM -  4PM", 14, 16 ] ],
+                    [ [ " 2PM -  4PM", 14, 16 ] ],
+                    [ [ " 2PM -  4PM", 14, 16 ] ],
+                    [ [ " 2PM -  4PM", 14, 16 ] ],
+                    [ ],
+                    [ ]
+                ]
+            ],
+        ],
+        [
+            "Indian",
+            "Arabic",
+            "American"
+        ]
     )
+
 ];
